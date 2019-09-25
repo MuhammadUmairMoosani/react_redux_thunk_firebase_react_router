@@ -43,6 +43,7 @@ export default function authReducer(state = initialState, action) {
     case SIGNIN_FAILURE:
     case SIGNUP_FAILURE:
     case LOGOUT_FAILURE:
+      alert(action.error.message);
       return {
         ...state,
         isLoading: false,
@@ -52,7 +53,11 @@ export default function authReducer(state = initialState, action) {
     case LOGOUT_SUCCESS:
       return {
         ...state,
-        initialState
+        isUserSecureGuard: false,
+        user: {},
+        isLoading: false,
+        isError: false,
+        error: {}
       };
     default:
       return state;

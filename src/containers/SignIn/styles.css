@@ -43,3 +43,11 @@ input[value] {
   border-color: #58145a;
   border-radius: 5px;
 }
+p {
+  color: #ffffff;
+}
+.nav-link {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}

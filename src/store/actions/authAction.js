@@ -18,10 +18,10 @@ export default class AuthActions {
       payload: data
     };
   }
-  static signin(user) {
+  static signin(data) {
     return {
       type: SIGNIN,
-      payload: user
+      payload: data
     };
   }
 
@@ -38,10 +38,10 @@ export default class AuthActions {
     };
   }
 
-  static signup(user) {
+  static signup(data) {
     return {
       type: SIGNUP,
-      payload: user
+      payload: data
     };
   }
 
@@ -59,9 +59,10 @@ export default class AuthActions {
     };
   }
 
-  static logout() {
+  static logout(data) {
     return {
-      type: LOGOUT
+      type: LOGOUT,
+      payload: data
     };
   }
 
